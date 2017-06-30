@@ -1,0 +1,63 @@
+#logo { float: left}
+
+.sidenav {
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    color: #474747;
+    left: 0;
+    font-family: 'Comfortaa', cursive;
+    font-size: 210px;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+    transition: 0.5s;
+}
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #47465b;
+    overflow: hidden;
+    /*background: url(http://4.bp.blogspot.com/-dVtgikk-kOY/UprtswP0yGI/AAAAAAAADag/Og0DtZ8t_oQ/s1600/header+base.png) no-repeat scroll top left;*/
+    
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: 0000;
+    text-align: center;
+    padding: 10px 100px 20px 150px; 
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-bottom: 1px solid black;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+
+#roles{
+    border: 1px inset black;
+    background-color: #eff7ff;
+    font-family: 'Muli', sans-serif;
+}
+
+.topnav .disabled {
+    pointer-events: none; 
+    cursor: wait;
+    background-color: #ddd;
+    text-decoration: none;
+}

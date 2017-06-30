@@ -1,0 +1,10 @@
+<div style="text-align: left; padding-top: 50px" id="sideAddress" class="sidenav">
+   <p>
+    {{lat}}
+    </p>
+<agm-map
+ [latitude]="lat"
+ [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+</div>

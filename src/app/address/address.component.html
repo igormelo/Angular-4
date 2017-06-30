@@ -1,0 +1,9 @@
+<div style="text-align: left; padding-top: 0px" id="sideAddress" class="sidenav">
+  <ul>
+    <p style="font-size: 70px;color: black;font-family: 'Anton', sans-serif">Endereços</p>
+    <p [routerLink]="['/address-details', user.id]" *ngFor="let user of users" style="cursor: pointer"><b>{{user.username}}</b>: {{user.address.street}}, {{user.address.city}} ({{user.address.zipcode}})<p>
+  </ul>
+  <router-outlet>
+</router-outlet>
+</div>
+

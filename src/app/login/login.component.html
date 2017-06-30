@@ -1,0 +1,15 @@
+<div class="row" style="padding-top: 50px">
+        <div class="imgcontainer">
+            <img src="http://200.201.27.30/intranet-new/imagens/keylogin.png" alt="Avatar" class="avatar">
+        </div>
+    <div class="container">
+        <label style="font-family: 'Comfortaa', cursive;;font-size: 20px">Login </label>
+        <input [(ngModel)]="usuario.nome" type="text" id="login" style="font-family: 'Comfortaa', cursive;;font-size: 20px; color: grey">
+    
+    <label style="font-family: 'Comfortaa', cursive;;font-size: 20px">Senha</label>
+    <input [(ngModel)]="usuario.senha" type="password" id="senha" class="validate" style="font-size: 20px">
+
+    <button type="submit" (click)="fazerLogin()" style="font-family: 'Anton', sans-serif;font-size: 20px"> Login </button>
+    </div>
+    <div id="snackbar">Login e/ou senha errados</div>
+</div>
