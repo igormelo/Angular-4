@@ -8,13 +8,14 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class UsersService {
+    // Serviço usado para fazer a chamada a um webservice com retorno JSON.
     private url: string = "http://jsonplaceholder.typicode.com/users";
     constructor(private http: Http) { }
 
     public getUserUrl(id){
         return this.url + "/" +id;
     }
-
+    //meteodo que "emite" o endPoint /users
     getUsers(){
         return this.http.get(this.url).map(response => response.json());
 

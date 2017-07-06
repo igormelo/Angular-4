@@ -14,7 +14,7 @@ import { AddressDetailsComponent } from './address-details/address-details.compo
 import { AgmCoreModule } from '@agm/core';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
-import {AuthService} from './login/auth.service';
+import { AuthService } from './login/auth.service';
 import { FormsModule }   from '@angular/forms';
 import { AuthGuard } from './auth-guard';
 

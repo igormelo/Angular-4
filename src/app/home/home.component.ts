@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from 'app/users.service';
 import {User} from 'app/user';
+import { AuthService } from '../login/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,19 @@ import {User} from 'app/user';
 })
 export class HomeComponent implements OnInit {
 private users: User[] = [];
-  constructor(private usersService: UsersService) { }
+showLoading: boolean = false;
+  constructor(private usersService: UsersService, private authService: AuthService) { }
 
   ngOnInit() {
     this.usersService.getUsers()
       .subscribe(data => this.users = data);
+
+    this.authService.showLoading.subscribe(
+          show => this.showLoading = show
+ )
+  }
+  logout() {
+    this.authService.fazerLogout();
   }
 
 }

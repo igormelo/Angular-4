@@ -12,7 +12,7 @@ import { AgmMap, AgmMarker } from '@agm/core';
 export class AddressDetailsComponent implements OnInit {
   user: User = new User();
   lat:string;
-  lng:number;
+  lng:string;
   
   constructor(
     private usersService: UsersService,

@@ -13,8 +13,7 @@ private users: User[] = [];
   ngOnInit() {
     this.usersService.getUsers()
       .subscribe(data => this.users = data);
-          this.usersService.getUser(1)
-      .subscribe(data => this.users = data);
+      
   }
 
 }

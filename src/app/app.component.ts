@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   showMenu: boolean = false;
   constructor(private autService: AuthService ) { }
     ngOnInit() {
+      //Inscrever no emissor(EventEmitter) com o subscribe
+      //Mostro o Menu superior apenas se o usuario estiver logado
         this.autService.showMenu.subscribe(
           show => this.showMenu = show
         );

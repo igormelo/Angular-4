@@ -11,5 +11,8 @@
 
     <button type="submit" (click)="fazerLogin()" style="font-family: 'Anton', sans-serif;font-size: 20px"> Login </button>
     </div>
+
+   <div *ngIf="showLoading" class="loader"></div>
     <div id="snackbar">Login e/ou senha errados</div>
+    <div id="snacknull">Login e/ou senha em branco</div>
 </div>
