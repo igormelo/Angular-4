@@ -1,9 +1,10 @@
 import {Addresses} from './addresses';
 export class User {
-  id: number;
-  name: string;
-  username: string;
-  phone: string;
-  email: string;
-  address: Addresses = new Addresses();
+
+ public id?: number;
+  public name?:string;
+  public username?: string;
+  public phone?: string;
+  public email?: string;
+  public address?: Addresses;
   }

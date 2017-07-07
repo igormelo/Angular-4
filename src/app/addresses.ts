@@ -1,8 +1,8 @@
 import {Geo} from './geo';
 export class Addresses {
-  street: string;
-  suite: string;
-  city: string;
-  zipcode: string;
-  geo: Geo = new Geo();
+  constructor(public street?: string
+  , public suite?: string
+  , public city?: string
+  , public zipcode?: string
+  , public geo?: Geo){}
 }

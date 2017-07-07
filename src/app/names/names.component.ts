@@ -1,7 +1,9 @@
+import { Observable } from 'rxjs/Rx';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {UsersService} from 'app/users.service';
 import {User} from 'app/user';
+import { Subscription } from "rxjs/Subscription";
 
 @Component({
   selector: 'app-names',
@@ -9,13 +11,22 @@ import {User} from 'app/user';
   styleUrls: ['./names.component.css']
 })
 export class NamesComponent implements OnInit {
-private users: User[] = [];
-pagina: number;
-  constructor(private usersService: UsersService) { }
+users: User[];
+constructor(private usersService: UsersService) { }
+
+ // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+  getNames() : Subscription {
+    return this.usersService.getUsers()
+    .subscribe(users => {
+      this.users = users.map(user => Object.assign(new User(), user));
+      console.log(this.users);
+    });
+  }
 
   ngOnInit() {
-    this.usersService.getUsers()
-      .subscribe(data => this.users = data);
+    this.getNames();
+    //this.usersService.getUsers()
+    //  .then(data => this.users = data);
   }
 
 }

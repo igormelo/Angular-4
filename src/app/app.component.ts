@@ -1,6 +1,7 @@
+import { User } from 'app/user';
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from './users.service';
-import {User} from './user';
+
 import { DOCUMENT } from '@angular/platform-browser';
 import { AuthService } from './login/auth.service';
 

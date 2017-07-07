@@ -8,7 +8,7 @@ import {User} from 'app/user';
   styleUrls: ['./email.component.css']
 })
 export class EmailComponent implements OnInit {
-private users: User[] = [];
+private users: User[];
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
