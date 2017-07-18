@@ -1,6 +1,7 @@
-import { User } from 'app/user';
-export class Usuario {
-    nome: string;
-    senha: string;
+import { User } from './../user';
 
+export class Usuario {
+     nome: string;
+     senha: string;
 }
+    

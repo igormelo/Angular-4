@@ -17,6 +17,7 @@ showLoading: boolean = false;
   ngOnInit() {
     this.usersService.getUsers()
       .subscribe(users => this.users = users);
+      
 
     this.authService.showLoading.subscribe(
           show => this.showLoading = show

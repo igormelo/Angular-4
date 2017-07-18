@@ -1,3 +1,5 @@
-export class Geo{
-    constructor(public lat?: number, public lng?: number){}
+export class Geo {
+
+    public lat: number;
+    public lng: number;
 }

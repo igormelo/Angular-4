@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './login/auth.service';
 import { FormsModule }   from '@angular/forms';
 import { AuthGuard } from './auth-guard';
+import { DiretivasDirective } from './diretivas/coordenadas/diretivas.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AuthGuard } from './auth-guard';
     HomeComponent,
     AddressDetailsComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    DiretivasDirective
     
   ],
   imports: [

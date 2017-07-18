@@ -18,7 +18,7 @@ constructor(private usersService: UsersService) { }
   getNames() : Subscription {
     return this.usersService.getUsers()
     .subscribe(users => {
-      this.users = users.map(user => Object.assign(new User(), user));
+      this.users = users;
       console.log(this.users);
     });
   }
