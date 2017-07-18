@@ -14,10 +14,12 @@ import {Observable} from 'rxjs/Rx';
 export class LoginComponent implements OnInit {
     showLoading: boolean = false;
     usuario: Usuario = new Usuario();
+    public new_user;
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.authService.getAll(); 
+    this.authService.getExternal();
+    this.authService.getLocal(); 
     this.authService.showLoading.subscribe(
           show => this.showLoading = show
     )
@@ -27,5 +29,6 @@ export class LoginComponent implements OnInit {
     this.authService.fazerLogin(this.usuario);
     console.log(this.usuario);
   }
+
 
 }
